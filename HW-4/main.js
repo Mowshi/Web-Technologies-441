@@ -10,7 +10,7 @@ function getCh1Choice()
     document.getElementById("choice2").style.display="block";
     document.getElementById("goBotton2").style.display="block";
 
-    document.getElementById("testboy")style.display="block";
+    myQuestion.innerHTML = "After sittind down at the least messy booth in the diner and ordering your food,<br>ninjas spring out of every corner of the restaurant, surounding you. However, you reconize the clan and know that they are vegan ninjas. looking<br>down at your plate, you see sausage and scrambled eggs and start coming up with a plan. Do you fight them off with your breakfest or make a break for the exit?";
   }
   else if(myChoice === "Ihop")
   {
@@ -18,7 +18,7 @@ function getCh1Choice()
   }
   else
   {
-    myQuestion.innerHTML = "That wasn't an option....";
+    myQuestion.innerHTML = "That wasn't an option...";
   }
 }
 
