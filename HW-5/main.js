@@ -1,13 +1,13 @@
-var images = ["card1","card1","card1","card1","card1","card1","card1","card1","card1","card1",]
-var cardBack = "imgs/questionBlock.png";
+var imagesTags = ["card1","card2","card3","card4","card5","card6","card7","card8","card9","card10",]
+var blankImagePath = "imgs/questionBlock.png";
 var actualImages = new Array();
 
-function printBacks()
+function printBlanks()
   {
     createRandomImageArray();
-    for(var i = 0; i < images.length; i++)
+    for(var i = 0; i < imageTags.length; i++)
     {
-      document.getElementById(images[i]).src= blankImagePath;
+      document.getElementById(imagesTags[i]).src= blankImagePath;
     }
   }
 
@@ -17,16 +17,16 @@ function createRandomImageArray()
   var count = [0,0];
   while(actualImages.length < 10)
   {
-    var randomNumber = Math.floor(Math.random()) * actualImagePath.length)
-    if(count[randomNumber] < 5)
+    var randomNumber = Math.floor(Math.random() * actualImagePath.length)
+    if(count[randomNumber] < 10)
     {
       actualImages.push(actualImagePath[randomNumber]);
-      count[randomNumber] = count[randomNumber] +1;
+      count[randomNumber] = count[randomNumber] + 1;
     }
   }
 }
 
-function flipCard(number)
+function flip(number)
 {
   document.getElementById(images[number]).src= actualImages[number];
 }
