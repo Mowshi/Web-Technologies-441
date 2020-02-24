@@ -34,28 +34,39 @@ function createRandomImageArray()
 
 function flipImage(number)
 {
+
   firstNumber = number;
-  if(firstNumber >=0)
+  if(firstNumber >= 0)
   {
     secondNumber = number;
     document.getElementById(imageTags[number]).src = actualImages[secondNumber];
+
   }
-  else if(firstNumber <0)
+  else if(firstNumber < 0)
   {
-    firstNumber;
+    firstNumber = number;
     document.getElementById(imageTags[firstNumber]).src= actualImages[firstNumber];
+    document.getElementById(imageTags[secondNumber]).src= actualImages[firstNumber];
   }
+  if(actualImages[secondNumber] != actualImages[firstNumber] && firstname >= 0 && secondNumber >= 0)
+  {
+    setTimeout(hideImages, 1000);
+  }
+  else if(actualImages[secondNumber] == actualImages[firstNumber] && firstname >= 0 && secondNumber >= 0)
+    {
+      firstNumber = -1;
+      secondNumber = -1;
+    }
 
-
-  document.getElementById(imageTags[firstNumber]).src= actualImages[firstNumber];
-
-  setTimeout(hideImages, 1000);
 
 }
 
 function hideImages()
 {
   document.getElementById(imageTags[firstNumber]).src = blankImagePath;
+  document.getElementById(imageTags[secondNumber]).src = blankImagePath;
+  firstNumber = -1;
+  secondNumber = -1;
 
 }
 
