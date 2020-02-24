@@ -1,5 +1,7 @@
 var imageTags = ["image1","image2","image3","image4","image5","image6","image7","image8","image9","image10",]
 var blankImagePath = "imgs/questionBlock.png";
+var firstNumber = -1;
+var secondNumber = -1;
 
 var player = {"firstname":"","lastname":""}
 
@@ -32,14 +34,41 @@ function createRandomImageArray()
 
 function flipImage(number)
 {
-  document.getElementById(imageTags[number]).src= actualImages[number];
+  firstNumber = number;
+  if(firstNumber >=0)
+  {
+    secondNumber = number;
+    document.getElementById(imageTags[number]).src = actualImages[secondNumber];
+  }
+  else if(firstNumber <0)
+  {
+    firstNumber;
+    document.getElementById(imageTags[firstNumber]).src= actualImages[firstNumber];
+  }
+
+
+  document.getElementById(imageTags[firstNumber]).src= actualImages[firstNumber];
+
+  setTimeout(hideImages, 1000);
+
 }
+
+function hideImages()
+{
+  document.getElementById(imageTags[firstNumber]).src = blankImagePath;
+
+}
+
 
 function addToPlayer()
 {
   var firstname = document.getElementById("txtFirstName").value;
+  player.firstname = firstname;
+  localStorage.setItem("playerInfo", JSON.stringify(player));
+  window.location = "gamePage.html";
 }
 function playerInfo()
 {
-
+  var playerInformation = localStorage.getItem("playerInfo");
+  player = JSON.parse(playerInformation);
 }
