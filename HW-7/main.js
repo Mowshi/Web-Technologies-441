@@ -1,13 +1,13 @@
 var imageTags = ["image1","image2","image3","image4","image5",]
 var blankImagePath = "imgs/cover.jpg";
 var actualImages = new Array();
+var title = null;
+
 class ViewFinder
 {
   constructor(title)
   {
     this.title = title;
-    this.image = image;
-    this.author = author;
   }
 
   toString()
@@ -25,6 +25,7 @@ class ViewFinder
   }
 
 }
+
 
 function printBlanks()
   {
@@ -52,7 +53,7 @@ function createRandomImageArray()
 
 
 
-/*
+
 function initializeArray()
 {
   var myViewFinder = new ViewFinder("imgs/");
@@ -60,7 +61,7 @@ function initializeArray()
   actualImages.push(myViewFinder);
   actualImages.push(myViewFinder1);
 }
-*/
+
 
 function accessInfo()
 {
