@@ -1,0 +1,47 @@
+#square
+{
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: absolute;
+  left: 0;
+  top: 300;
+}
+
+body
+{
+  background-color: grey;
+}
+
+h2
+{
+  color: white;
+}
+
+#boo1
+{
+  position: absolute;
+  left: 100;
+  top: 300;
+}
+
+#boo2
+{
+  position: absolute;
+  left: 300;
+  top: 350;
+}
+
+#boo3
+{
+  position: absolute;
+  left: 400;
+  top: 400;
+}
+
+#boo4
+{
+  position: absolute;
+  left: 500;
+  top: 250;
+}
