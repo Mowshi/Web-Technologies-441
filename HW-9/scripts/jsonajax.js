@@ -2,10 +2,10 @@
             $("button").click(function () {
                 $("#bikeInformation").load("data/bike.json", function(responseText){
                     var bike = JSON.parse(responseText);
-                    $("#bikeInformation").html("Manufacturer: " + bike.manufacturer 
-                + "<br>Model:" + bike.model + "<br>First Name:" + bike.owner.firstName + "<br>Last Name:" 
-                + bike.owner.lastName + "<br>Sizes Available:<br>" +
-                bike.sizes[0] + "<br>" + bike.sizes[1] + "<br>" + bike.sizes[2] + "<br>" + bike.sizes[3]);
+                    $("#bikeInformation").html("title: " + bike.manufacturer
+                + "<br>year:" + bike.year + "<br>First Name:" + bike.crew.firstName + "<br>Last Name:"
+                + bike.crew.lastName + "<br>Sizes Available:<br>" +
+                bike.studio[0] + "<br>" + bike.studio[1] + "<br>" + bike.studio[2] + "<br>" + bike.studio[3]);
                 });
             });
         });

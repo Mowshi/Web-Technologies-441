@@ -1,6 +1,6 @@
 <bike>
-	<manufacturer>Orbea</manufacturer>
-	<model>Orca</model>
+	<title>Orbea</title>
+	<year>Orca</year>
 	<year>2019</year>
 	<price>$4500</price>
 </bike>

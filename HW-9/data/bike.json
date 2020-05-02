@@ -1,14 +1,14 @@
 {
-    "manufacturer" : "Santa Cruz",
-    "model" : "5010",
-    "owner" : {
-        "firstName" : "Bob",
-        "lastName" : "Jones"
+    "title" : "Santa Cruz",
+    "year" : "5010",
+    "crew" : {
+        "firstName" : "",
+        "lastName" : ""
     },
-    "sizes" : [
-        "small",
-        "medium",
-        "large",
-        "x-large"
+    "studio" : [
+        "AMB Picture Catalogue",
+        "",
+        "",
+        ""
     ]
 }

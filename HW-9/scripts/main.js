@@ -1,29 +1,29 @@
  let bike = {
-                "manufacturer" : "Santa Cruz",
-                "model" : "5010",
-                "owner" : {
-                    "firstName" : "Bob",
-                    "lastName" : "Jones"
+                "title" : "After Dark in Central Park",
+                "year" : "1900",
+                "crew" : {
+                    "firstName" : "",
+                    "lastName" : ""
                 },
-                "sizes" : [
-                    "small",
-                    "medium",
-                    "large",
-                    "x-large"
+                "studio" : [
+                    "AMB Picture Catalogue",
+                    "",
+                    "",
+                    ""
                 ]
             }
-        
+
         $(function () {
             $("button").click(function () {
                 showBikeInfo();
             });
 
         });
-       
+
         function showBikeInfo()
             {
-                $("#bikeInformation").html("Manufacturer: " + bike.manufacturer 
-                + "<br>Model:" + bike.model + "<br>First Name:" + bike.owner.firstName + "<br>Last Name:" 
-                + bike.owner.lastName + "<br>Sizes Available:<br>" +
-                bike.sizes[0] + "<br>" + bike.sizes[1] + "<br>" + bike.sizes[2] + "<br>" + bike.sizes[3]);
+                $("#bikeInformation").html("title: " + bike.title
+                + "<br>year:" + bike.year + "<br>First Name:" + bike.crew.firstName + "<br>Last Name:"
+                + bike.crew.lastName + "<br>studio:<br>" +
+                bike.studio[0] + "<br>" + bike.studio[1] + "<br>" + bike.studio[2] + "<br>" + bike.studio[3]);
             }
