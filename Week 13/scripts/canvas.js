@@ -8,12 +8,12 @@ var questions;
 var squareArray = [];
 var lives = 3;
 $(document).ready(function(){
-    
-    setup();  
-    
+
+    setup();
+
     $(this).keypress(function(event){
         getKey(event);
-        
+
     });
 });
 
@@ -27,6 +27,9 @@ function setup()
     // create two objects
     square1 = new Square(100,100,50,50,"#0000FF");
     square2 = new Square(400,400,100,100,"#00FF00");
+    square3 = new Square(500,300,150,200,"#00FF00");
+    square4 = new Square(200,100,50,200,"#00FF00");
+    square5 = new Square(50,200,250,100,"#00FF00");
     $.getJSON("data/information.json", function(data) {
         for(var i = 0; i < data.squares.length; i++)
         {
@@ -34,9 +37,9 @@ function setup()
         }
         drawSquare();
     });
-    
 
-    
+
+
 }
 
 function getKey(event)
@@ -63,7 +66,7 @@ function getKey(event)
         moveRight();
         direction = "right";
     }
-    var test = hasCollided(square1,square2);
+    var test = hasCollided(square1,square2,square3,square4,square5);
     var test2 = false;
     for(var i = 0; i < squareArray.length; i++)
     {
@@ -73,7 +76,7 @@ function getKey(event)
         {
             break;
         }
-        
+
         //console.log(test2);
     }
     if(test || test2)
@@ -95,10 +98,10 @@ function getKey(event)
         {
             moveUp();
         }
-    
+
     }
-    drawSquare(); 
-    
+    drawSquare();
+
 }
 
 function moveUp()
@@ -125,6 +128,12 @@ function drawSquare()
     ctx.fillRect(square1.x, square1.y, square1.width, square1.height);
     ctx.fillStyle = square2.mainColor;
     ctx.fillRect(square2.x, square2.y, square2.width, square2.height);
+    ctx.fillStyle = square3.mainColor;
+    ctx.fillRect(square3.x, square3.y, square3.width, square3.height);
+    ctx.fillStyle = square4.mainColor;
+    ctx.fillRect(square4.x, square4.y, square4.width, square4.height);
+    ctx.fillStyle = square5.mainColor;
+    ctx.fillRect(square5.x, square5.y, square5.width, square5.height);
     for(var i = 0; i < squareArray.length; i++)
     {
         ctx.fillStyle = squareArray[i].mainColor;
@@ -132,7 +141,7 @@ function drawSquare()
     }
 
     ctx.font = "30px Arial";
-    ctx.fillText("Lives: " + lives, 10, 50);    
+    ctx.fillText("Lives: " + lives, 10, 50);
 
 }
 
