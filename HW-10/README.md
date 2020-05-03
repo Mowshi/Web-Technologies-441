@@ -1,1 +1,1 @@
-I found some help online for this one
+I got some help from my discord server for this one
