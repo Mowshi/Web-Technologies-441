@@ -1,0 +1,10 @@
+iframe
+{
+    display:block;
+    margin: 0 auto;
+    background-color: #777;
+}
+body
+{
+  background-color: lightblue;
+}
